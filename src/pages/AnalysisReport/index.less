@@ -1,0 +1,185 @@
+@import '../../global';
+
+.reportContain{
+   width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.wrap_index {
+  position: absolute;
+  top: 65px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  //background: var(--self-report-topTitle-background);
+  background: #ffffff;
+  z-index: 600;
+  .topTitle {
+    background: var(--self-report-topTitle-background);
+    padding: 12px 24px;
+    border-bottom: 1px solid #eee;
+  }
+  .wrap_content {
+    background: var(--self-report-topTitle-background);
+    height: calc(100vh - 162px);
+  }
+}
+.analyzeTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+
+}
+.topTip {
+  font-size: 16px;
+  font-weight: 600;
+}
+.tableContain {
+  width: 100%;
+  //height: 500px;
+}
+.selectContain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+/*  :global{
+    .ant-radio-button-wrapper{
+      color: var(--self-ant-radio-button-wrapper-report-color);
+    }
+    .ant-radio-button-wrapper:hover {
+      color: var(--self-radio-button-text-color-hover);
+    }
+    .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):first-child {
+      color: white;
+    }
+    .ant-radio-button-wrapper:not(:first-child)::before {
+      border-color: var(--self-border-color);
+    }
+    .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled){
+      background: var(--self-report-radio-background-color);
+      color: #ffffff;
+      border-color: var(--self-border-color)!important;
+    }
+    .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover{
+      color: #ffffff;
+    }
+  }*/
+}
+.buttonTitle {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 20px;
+  flex-wrap: wrap;
+}
+.operatorTool {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  :global {
+    .ant-btn {
+      padding: 4px 0;
+      span {
+        padding: 0 4px;
+      }
+    }
+    .ant-divider-vertical{
+      border-left: 1px solid rgba(0, 0, 0, 0.8);
+      margin: 0;
+      top:0
+    }
+  }
+}
+.firstBtn {
+  :global {
+    span {
+      padding: 0 !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &::after {
+        content: '';
+        display: block;
+        width: 1.5px;
+        height: 12px;
+        background: #999;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+.centerBtn {
+  :global {
+    span {
+      padding: 0 !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &::before {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 12px;
+        background: #999;
+        margin-right: 5px;
+      }
+      &::after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 12px;
+        background: #999;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+.takeBtn {
+  border-radius: 4px;
+}
+.tableStyle {
+  margin-top: 20px;
+  :global{
+    .ant-table-pagination.ant-pagination{
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+.logTableStyle {
+  :global {
+    .ant-modal-body {
+      padding: 0 24px;
+    }
+    .ant-pagination {
+      padding-top: 30px;
+    }
+  }
+}
+.takeTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dot{
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  border-radius: 100%;
+  position: relative;
+  top: -2px;
+  margin-right: 3px;
+}
+.twoBtn {
+  margin-left: 10px;
+}
+.selectLoading {
+  //height: 250px;
+  width: 100%;
+  position: relative;
+}
+.map_style {
+  width: 100%;
+  height: 100vh;
+  z-index: @map_z_index;
+}

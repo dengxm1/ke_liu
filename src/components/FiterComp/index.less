@@ -1,0 +1,68 @@
+.wrap_filter {
+  font-size: 12px;
+  //width: 146px;
+  //height: 140px;
+  //height: fit-content;
+  background-image: url("../../static/fiter_content_bg.png");
+  //border: 2px solid rgba(11, 128, 239, 0.50);
+  background-size: 150px 111px;
+  animation: mymove 0.3s;
+
+  :global {
+    .ant-radio-wrapper {
+      font-size: 12px;
+      margin-top: 6px;
+    }
+
+    .ant-radio-group {
+      margin-left: 9px;
+      flex-wrap: wrap;
+    }
+  }
+
+  .wrap_button {
+    width: 113px;
+    position: absolute;
+    bottom: 16px;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 12px;
+    margin-top: 40px;
+
+    .showButton {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    :global {
+      .ant-btn-sm {
+        height: 20px;
+        padding: 0 5px;
+      }
+    }
+  }
+
+  .wrap_content {
+    margin: 17px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+  }
+}
+
+@keyframes mymove {
+  0% {
+    transform: scale(0.5);
+  }
+  25% {
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+}
+

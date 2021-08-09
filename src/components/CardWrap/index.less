@@ -1,0 +1,31 @@
+@import '../../global';
+
+.wrap_card {
+  :global {
+    .ant-card-body {
+      padding: 5px;
+    }
+
+    .ant-card-head {
+      min-height: 32px;
+      height: 32px;
+      line-height: 32px;
+    }
+
+    .ant-card-head {
+      padding: 0 5px;
+      background: @card_header_bc;
+      border-bottom: none;
+
+      span {
+        border-left: @card_header_left_border;
+        margin-left: 5px;
+        padding-left: 10px;
+      }
+    }
+
+    .ant-card-head-title {
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,264 @@
+.wrap_tip {
+  //position: relative;
+  // height: 70px;
+  //background-image: url("../../static/background.png");
+  background-size: cover;
+  z-index: 10;
+  text-align: center;
+  //background: #FFFFFF;
+  .content_row {
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    .passengerItem{
+      position: relative;
+      width: 130px;
+      height: 76px;
+      cursor: pointer;
+      box-shadow: 0 0 3px 3px #c0e0f9;
+      //background: yellow;
+      background: url("../../static/flow_bg_index.png") no-repeat top left;
+      background-size: cover;
+      .flowData{
+        position: absolute;
+        top: 5px;
+        left: 0;
+        right: 0;
+    /*    .flowNum{
+          position: absolute;
+          font-family: DINAlternate-Bold;
+          font-size: 24px;
+          color: #0B80EF;
+          left: 10px;
+        }
+        .flowUnit{
+          font-family: PingFangSC-Regular;
+          font-size: 12px;
+          color: #0B80EF;
+          //line-height: 28px;
+          top: 8px;
+        }*/
+        .flowWrap{
+          position: relative;
+          width: 100%;
+          .flowNum{
+            font-size: 24px;
+            color: #0B80EF;
+          }
+          .flowUnit{
+            font-size: 12px;
+            color: #0B80EF;
+          }
+        }
+      }
+      .dataTip{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 40px;
+        .tipWrap{
+          width: 100%;
+          .tipName{
+            font-size: 12px;
+            color: #333333;
+            line-height: 16px;
+          }
+          .tipNum{
+            font-size: 10px;
+            color: #DA1414;
+            img{
+              position: relative;
+              top: -1px;
+            }
+            i{
+              display: inline-block;
+              height: 11px;
+              width: 9px;
+              background-repeat: no-repeat;
+            }
+            i.rateUp{
+              background-image: url('../../static/up.png');
+            }
+            i.rateDown{
+              background-image: url('../../static/down.png');
+            }
+            b{
+              font-weight: 400;
+            }
+            b.red{
+              color: red;
+            }
+            b.green{
+              color: green;
+            }
+          }
+        }
+      }
+    }
+    .passengerItem:hover, .activeItem{
+      background: url("../../static/flow_bg_index2.png") no-repeat top left;
+      background-size: cover;
+      color: #FFF;
+      .flowData .flowWrap{
+        .flowNum{
+          color: #fff;
+        }
+        .flowUnit{
+          color: #fff;
+        }
+      } 
+      .dataTip .tipWrap{
+        .tipName{
+          color: #fff;
+        }
+        .tipNum{
+          color: #fff;
+          i.rateUp{
+            background-image: url('../../static/up_white.png');
+          }
+          i.rateDown{
+            background-image: url('../../static/down_white.png');
+          }
+          b.red{
+            color: white;
+          }
+          b.green{
+            color: white;
+          }
+        }
+      }
+    } 
+    .cornerStyle{
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    
+  }
+  @media only screen and (max-width: 1236px) {
+    .content_row :global{
+      .ant-space .ant-space-item:nth-child(5){
+        display: none;
+      }
+    }
+  }
+  @media only screen and (max-width: 1098px) {
+    .content_row :global{
+      .ant-space .ant-space-item:nth-child(4){
+        display: none;
+      }
+    }
+  }
+  @media only screen and (max-width: 960px) {
+    .content_row :global{
+      .ant-space .ant-space-item:nth-child(3){
+        display: none;
+      }
+    }
+  }
+  @media only screen and (max-width: 822px) {
+    .content_row :global{
+      .ant-space .ant-space-item:nth-child(2){
+        display: none;
+      }
+    }
+  }
+
+
+  .title {
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-align: center;
+    width: 93px;
+    height: 22px;
+    background: #0B80EF;
+    margin: auto;
+    border-right: 20px transparent solid;
+    border-left: 20px transparent solid;
+
+    &:before {
+      width: 0px;
+      height: 22px;
+      border: 11px transparent solid;
+      border-right-color: #0B80EF;
+      position: absolute;
+      left: 115px;
+      content: "";
+    }
+
+    &:after {
+      width: 0px;
+      height: 22px;
+      border: 11px transparent solid;
+      border-left-color: #0B80EF;
+      position: absolute;
+      left: 228px;
+      content: "";
+    }
+  }
+
+  .show_yellow {
+    width: 104px;
+    height: 13px;
+    background-color: #ef9251;
+    z-index: -2;
+    margin: auto;
+    position: absolute;
+    top: 11px;
+    left: 50%;
+    /* top: 50%; */
+    transform: translate(-50%, -50%);
+
+    &:before {
+      width: 0px;
+      height: 14px;
+      border: 7px transparent solid;
+      border-right-color: #ef9251;
+      position: absolute;
+      left: -14px;
+      content: "";
+    }
+
+    &:after {
+      width: 0px;
+      height: 14px;
+      border: 7px transparent solid;
+      border-left-color: #ef9251;
+      position: absolute;
+      left: 104px;
+      content: "";
+    }
+  }
+}
+
+
+//*******************************箭头上下移动动画
+.imgMoveUp {
+  animation: move_up 2s infinite;
+}
+
+.imgMoveDown {
+  animation: move_down 2s infinite;
+}
+
+@keyframes move_up {
+  0% {
+    padding-top: 8px;
+  }
+
+  100% {
+    padding-top: 0;
+  }
+}
+
+@keyframes move_down {
+  0% {
+    padding-top: 0;
+  }
+
+  100% {
+    padding-top: 8px;
+  }
+}

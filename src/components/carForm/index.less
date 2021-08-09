@@ -1,0 +1,89 @@
+@import '../../global';
+.analyzeCard2 {
+  :global {
+    .ant-card-body {
+      padding: 16px;
+      .ant-select-selector{
+        height: 28px;
+      }
+      .ant-select-selection-item{
+        line-height:28px
+      }
+      .ant-form-item-control-input{
+        min-height: 28px;
+      }
+    }
+    .ant-picker {
+      width: 100%;
+    }
+    .ant-form-item {
+      margin-bottom: 10px;
+    }
+    .ant-radio-group {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .ant-radio-button-wrapper {
+      padding: 0;
+      width: 80px;
+      text-align: center;
+      height: 28px;
+      line-height: 28px;
+    }
+    .ant-card-head-title {
+      padding: 0;
+    }
+  }
+  .go_or_arrive{
+    justify-content: flex-start;
+  }
+}
+
+.btnContain {
+  width: 100%;
+}
+.analyzeBtn {
+  width: 100%;
+  border-radius: 2px;
+}
+.selectArea{
+  position: absolute;
+  top: 50%;
+  right: 70px;
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  z-index: 10;
+}
+.selectItem{
+  :global{
+    .ant-form-item-control-input-content{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .ant-form-item{
+        margin-bottom:0;
+        &:first-child{
+          width: 204px;
+        }
+        .ant-btn{
+          padding: 4px 10px;
+        }
+      }
+    }
+  /*  .ant-select-show-search.ant-select:not(.ant-select-customize-input) .ant-select-selector{
+      cursor: pointer;
+    }*/
+    .ant-select-arrow{
+      top: 50%;
+      pointer-events: auto
+    }
+  }
+}
+.tagStyle{
+  max-width: 170px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}

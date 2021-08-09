@@ -1,0 +1,69 @@
+@import "../../global";
+
+.wrap_button {
+  background: #0B80EF;
+  border-radius: 4px;
+  height: 40px;
+  width: 220px;
+  left: 315px;
+  position: absolute;
+  top: 0;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+
+  span {
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 16px;
+
+    img {
+      margin-right: 10px;
+      transition: 0.5s;
+    }
+  }
+
+  &:hover {
+    span {
+      img {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+//.wrap_button:hover {
+//  animation: animate 8s linear infinite;
+//}
+//
+//@keyframes animate {
+//  0% {
+//    background-position: 0%;
+//  }
+//  100% {
+//    background-position: 400%;
+//  }
+//}
+//
+//.wrap_button::before {
+//  content: '';
+//  position: absolute;
+//  top: -5px;
+//  left: -5px;
+//  right: -5px;
+//  bottom: -5px;
+//  z-index: -1;
+//  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+//  background-size: 400%;
+//  border-radius: 40px;
+//  opacity: 0;
+//  transition: 0.5s;
+//}
+//
+//.wrap_button:hover::before {
+//  filter: blur(20px);
+//  opacity: 1;
+//  animation: animate 8s linear infinite;
+//}

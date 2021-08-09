@@ -1,0 +1,133 @@
+//全局通用样式
+@div_to_top: 150px;
+@div_to_sides: 15px;
+@left_right_width: 320px;
+@div_to_bottom: 15px;
+@header_height: 80px;
+@card_header_bc: '';
+@card_header_left_border: 2px solid #0b80ef;
+@theme_color: #0b80ef;
+@map_z_index: 0;
+
+//字体
+/*@font-face {
+  font-family: PingFangSC-Medium;
+  src: url('../src/static/font/PingFangMedium.ttf');
+}
+
+/*******以下默认样式需要****/
+html,
+body,
+ul,
+p,
+div,
+root pre {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  // color: rgba(0, 0, 0, 0.65);
+  letter-spacing: 0;
+  //font-family: PingFangSC-Regular;
+  font-family: MicrosoftYaHei;
+}
+
+* {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+canvas {
+  display: block;
+}
+
+:global {
+  .ant-form label {
+    font-size: 12px;
+  }
+}
+
+// 兼容IE11
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}
+
+//地图地点名称的文字
+.od_marker {
+  p {
+    //width: 100px;
+    width: max-content;
+    width: -moz-max-content;
+    font-size: 14px;
+    font-family: PingFangSC-Medium;
+    //color: var(--self-map-marker-color);
+    color: #042B4F;
+  }
+}
+
+//地图的距离文字
+.distance_marker {
+  p {
+    width: max-content;
+    height: fit-content;
+    font-size: 14px;
+    font-family: PingFangSC-Medium;
+    //color: #32c5ff;
+    //font-weight: bold;
+    //background: rgba(0, 0, 0, 0.25);
+    display: inline-block;
+    border-radius: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.popStyle {
+  width: 300px;
+  height: 400px;
+  background-color: #0b80ef;
+}
+
+:global {
+  .leaflet-popup-content-wrapper {
+    margin-top: 60px;
+  }
+}
+
+/*******************配置组件自定义颜色******************/
+.body-wrap-theme1 {
+  // theme1下的全局变量在此定义
+  --font-color: red;
+  --bg-color: #011313;
+  --primary: #1890ff;
+  --text-color: rgb(224, 224, 224);
+  --text-color-secondary: #fff;
+  --card-head-background: #074782;
+  --text-color-secondary-dark: rgba(255, 255, 255, 0.45);
+  --self-border-color: #32C5FF;
+  --self-radio-button-text-color: #32C5FF;
+  --self-radio-button-text-color-hover: #32C5FF;
+  --self-div-background: rgba(0, 37, 72, 0.85);
+  --self-icon-color: #fff;
+  --self-card-border-color-base: 1px solid rgba(50, 197, 255, 0.40);
+  --self-map-marker-color: #fff;
+  --self-report-radio-background-color: #32C5FF;
+  --link-color: #1890ff;
+}
+
+.body-wrap-theme2 {
+  // theme2下的全局变量在此定义
+  /*
+    --font-color: blue;
+    --bg-color: #ffffff;*/
+}

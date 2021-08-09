@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <meta charSet="utf-8"/>
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+    <title>城市客流出行特征分析系统</title>
+    <!--    leaflet-->
+    <script type="text/javascript" src="/leaflet.js"></script>
+    <link rel="stylesheet" href="/leaflet.css"/>
+
+    <!--*******************单点登录插件**********************-->
+    <!--    测试-->
+    <!--    <script src="http://42.228.55.199:18000/static/js/idaas-login-plugin.js"></script>-->
+    <!--正式-->
+    <!--    <script src="http://59.207.61.4:11262/static/js/idaas-login-plugin.js"></script>-->
+    <!--通用-->
+    <script type="text/javascript" src="/idaasPlugin.js"></script>
+</head>
+<body>
+
+
+<script>
+  //以下为单点登录配置
+
+  var configIDaaSConfig = new IDaaSLoginPlugin({
+    //测试地址
+    serverUrl: 'http://42.228.55.199:18000/',
+    portalUrl: 'http://42.228.55.199:18000/frontend/login#/login',
+    instanceId: 'zzd',
+    appId: '3d7e52e3d2566d84b1582f31a45e08855NlUxZB77wg',
+
+    //正式地址
+/*    serverUrl: 'http://59.207.61.4:11262',   //IDaaS服务地址
+    portalUrl: 'http://59.207.61.4:11262/frontend/login#/login', //IDaaS登录模块地址
+    instanceId: 'szzz',
+    appId: '38be56de0e3b8ea0b9e44213d1014cb0eIbNCD4x414',*/
+    styleUrl: '',
+    box: '',
+    width: 340,
+    height: 410,
+    target: true,
+  });
+
+  //用来接收单点登录发送过来的消息，成功登陆后跳转到指定页面
+  window.addEventListener('message', function(event) {
+    typeof event.data.startUrl == 'string' && event.data.startUrl != '' && (window.location.href = event.data.startUrl);
+  });
+</script>
+<div id="root"></div>
+<style>
+    .amap-copyright {
+        visibility: hidden !important;
+    }
+
+    .amap-logo {
+        display: none !important;
+    }
+
+    .leaflet-container .leaflet-control-attribution {
+        display: none !important;
+    }
+</style>
+</body>
+</html>

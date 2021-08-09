@@ -1,0 +1,141 @@
+.content {
+  .progress_card {
+    height: 100px;
+    padding: 0 10px;
+
+    :global {
+      .ant-card-head-title {
+        padding: 6px 0;
+      }
+    }
+  }
+
+  .suggest_card {
+    border-bottom: none;
+    padding: 20px 0 0;
+
+    :global {
+      .ant-card-body {
+        padding: 18px 10px 0 !important;
+      }
+
+      .ant-card-head-title {
+        padding: 0;
+
+        span {
+          padding-left: 10px;
+        }
+      }
+
+      .ant-card-head {
+        padding: 0;
+        font-family: PingFangSC-Medium;
+        background: linear-gradient(to right, #E9E9E9 0%, #FFFFFF 100%);
+        background: -webkit-linear-gradient(to right, #E9E9E9 0%, #FFFFFF 100%);
+        background: -moz-linear-gradient(to right, #E9E9E9 0%, #FFFFFF 100%);
+        background: -o-linear-gradient(to right, #E9E9E9 0%, #FFFFFF 100%);
+        border-bottom: none;
+        min-height: 33px;
+        height: 33px;
+        line-height: 33px;
+      }
+    }
+
+    .high_light {
+      font-family: PingFangSC-Medium;
+      font-size: 12px;
+      color: #0B80EF;
+      line-height: 18px;
+    }
+
+    p {
+      font-family: PingFangSC-Regular;
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.85);
+      line-height: 18px;
+    }
+  }
+}
+
+.card_title {
+  display: flex;
+  align-items: center;
+}
+
+.title_icon_content {
+  position: relative;
+  height: 18px;
+  width: 16px;
+  display: inline-block;
+  overflow: hidden;
+
+  .react_icon {
+    position: absolute;
+    top: 0;
+    left: -12px;
+    width: 10px;
+    height: 18px;
+    background: #FFFFFF;
+    z-index: 9;
+  }
+
+  .circle_icon {
+    position: absolute;
+    top: 0;
+    left: -12px;
+    width: 16px;
+    height: 18px;
+    border-radius: 8px;
+    background: #0B80EF;
+    z-index: 6;
+  }
+}
+
+.title_name {
+  font-weight: 600;
+  margin-left: -5px;
+}
+
+.progress_graph {
+  position: relative;
+  margin-top: 10px;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  position: absolute;
+  bottom: 18px;
+}
+
+.first {
+  border-top: 12px solid #F8E066;
+}
+
+.second {
+  border-top: 12px solid #FDB438;
+}
+
+.third {
+  border-top: 12px solid #FA6D35;
+}
+
+.four {
+  border-top: 12px solid #EA2A25;
+}
+
+.labelContent {
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.45);
+    text-align: center;
+  }
+}
